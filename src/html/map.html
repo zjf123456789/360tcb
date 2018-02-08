@@ -1,0 +1,50 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <style type="text/css">
+      body,html,#container{
+        height: 100%;
+        margin: 0px;
+      }
+     
+      #container{
+      	width: 1000px;
+      	height: 500px;
+      	margin: 20px 50px;
+      }
+    </style>
+    <title>快速入门</title>
+  </head>
+  <body>
+    <div id="container" tabindex="0"></div>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.3&key=4443ebedef5ff2e42a25b0cb513417ab"></script>
+    <script type="text/javascript">
+        var map = new AMap.Map('container',{
+            resizeEnable: true,
+            zoom: 10,
+            center: [116.480983, 40.0958]
+        });
+        var map = new AMap.Map('container',{
+    zoom: 10,
+    center: [116.39,39.9]
+});
+AMap.plugin(['AMap.ToolBar','AMap.Scale','AMap.OverView'],
+    function(){
+        map.addControl(new AMap.ToolBar());
+
+        map.addControl(new AMap.Scale());
+
+        map.addControl(new AMap.OverView({isOpen:true}));
+});
+marker = new AMap.Marker({
+position:["116.368904","39.923423"],
+offset:new AMap.Pixel(-12,-12),
+zIndex:101,
+title: "北京",
+map: map 
+    });
+    </script>
+  </body>
+</html>
