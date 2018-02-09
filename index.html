@@ -1,110 +1,234 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<script src="src/js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet" type="text/css" href="src/css/new_file.css"/>
-		<link rel="stylesheet" type="text/css" href="lib/Swiper-4.0.7/dist/css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="src/css/new_file.css" />
+		<link rel="stylesheet" type="text/css" href="lib/Swiper-4.0.7/dist/css/swiper.min.css" />
 		<script src="jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
 		<script src="lib/Swiper-4.0.7/dist/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="src/js/baiduTemplate.js" type="text/javascript" charset="utf-8"></script>
 	</head>
+
 	<body>
-		
+
 		<div id="log">
 			<div class="log_left">
 				<p></p>
-			 <ul>
-			 	<li><a href="#">北京&nbsp;&nbsp;&nbsp;</a></li>
-			 	<li><a href="#">[切换城市]&nbsp;&nbsp;&nbsp;</a></li>
-			 	<li>|&nbsp;&nbsp;&nbsp;</li>
-			 	<li><a href="#">同城帮首页</a></li>
-			 </ul>
+				<ul>
+					<li>
+						<a href="#">北京&nbsp;&nbsp;&nbsp;</a>
+					</li>
+					<li>
+						<a id="qiehuan"  href="#">[切换城市]&nbsp;&nbsp;&nbsp;</a>
+					</li>
+					<li>|&nbsp;&nbsp;&nbsp;</li>
+					<li>
+						<a href="#">同城帮首页</a>
+					</li>
+				</ul>
+			</div>
+			<div id="chengshi">
+				<ul style="display: flex;margin-left: 20px;">
+					<li>城市列表</li>
+					<li style="margin-left: 430px;"><button id="guanbi"style="background:none;">关闭</button></li>
+				</ul>
+ 				<br />
+				 
+				<ul id="hot">
+					 
+				</ul>
+				<br />
+				<br />
 				
+				 
+				<ul id="list">
+
+				</ul>
+				<br />
+				<br />
+				<hr />
+				<ul id="city">
+                   <li>安阳</li>
+                   <li>安庆</li>
+                   <li>安康</li>
+                   <li>阿克</li>
+                   <li>苏阿</li>
+                   <li>勒泰</li>
+                   <li>鞍山</li>
+                   <li>安西</li>
+                   <li>安顺</li>
+                   <li>阿里</li>
+                   <li>地区</li>
+                   <li>阿拉</li>
+                   <li>善盟</li>
+                   <li>阿坝</li>
+				</ul>
+				 
 			</div>
 			<div id="log_right">
 				<ul>
-					<li><a href="#">登录</a></li>
+					<li>
+						<a href="#">登录</a>
+					</li>
 					<li>|</li>
-					<li><a href="#">注册</a></li>
+					<li>
+						<a href="#">注册</a>
+					</li>
 					<li>|</li>
-					<li><a href="#">我的订单</a></li>
+					<li>
+						<a href="#">我的订单</a>
+					</li>
 					<li>|</li>
-					<li><a href="#">在线客服</a></li>
+					<li>
+						<a href="#">在线客服</a>
+					</li>
 					<li>|</li>
-					<li><a href="#">（9:00-21:00）</a></li>
+					<li>
+						<a href="#">（9:00-21:00）</a>
+					</li>
 					<li>|</li>
-					<li> <a href="#">客户服务</a></li>
+					<li>
+						<a href="#">客户服务</a>
+					</li>
 					<li>|</li>
-					<li><a href="#">论坛</a></li>
+					<li>
+						<a href="#">论坛</a>
+					</li>
 					<li>|</li>
-					<li><a href="#">投诉建议</a></li>
+					<li>
+						<a href="#">投诉建议</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 		<div id="log_two">
 			<div class="image">
-			<img src="src/imge/ren.png"/>
+				<img src="src/imge/ren.png" />
 			</div>
 			<div class="list">
 				<ul>
-				<li ><a href="#"> 二手优品</a></li>
-				<li><a href="#">手机回收</a></li>
-				<li><a href="#">手机维修</a></li>
-				<li><a href="#">电脑维修 </a></li>
-				<li><a href="#">以旧换新</a></li>
-				<li><a href="#">手机租用</a></li>
-			</ul>
+					<li>
+						<a href="#"> 二手优品</a>
+					</li>
+					<li>
+						<a href="#">手机回收</a>
+					</li>
+					<li>
+						<a href="#">手机维修</a>
+					</li>
+					<li>
+						<a href="#">电脑维修 </a>
+					</li>
+					<li>
+						<a href="#">以旧换新</a>
+					</li>
+					<li>
+						<a href="#">手机租用</a>
+					</li>
+				</ul>
 			</div>
 		</div>
-			<img class="dong" src="src/imge/hot.jpg"/>
- 
-	  <!-- Swiper -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="src/imge/t010277e84ce18b98b6.png"/></div>
-      <div class="swiper-slide"><img src="src/imge/t019f09cd1c5850e1a7.png"/></div>
-      <div class="swiper-slide"><img src="src/imge/t01080757ebeb09256f.png"/></div>
-    </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-    
-</body> 
-    
-   <script>
-			$(function() {
-				$("cate-sub").hover(function() {
-					console.log("hover in") 
-				},function(){
-					console.log("out")
-				})
+		<img class="dong" src="src/imge/hot.jpg" />
 
+		<!-- Swiper -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="src/imge/t010277e84ce18b98b6.png" /></div>
+				<div class="swiper-slide"><img src="src/imge/t019f09cd1c5850e1a7.png" /></div>
+				<div class="swiper-slide"><img src="src/imge/t01080757ebeb09256f.png" /></div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+
+	</body>
+	<script type="text/html" id="temphot">
+		<%for (var i = 0; i <hotCity.length; i++) {%>
+		<li>
+			<%=hotCity[i].name%>
+		</li>
+		<%} %>
+	</script>
+	<script type="text/html" id='tempList'>
+		<%for (var k in obj){%>
+		<li onclick="dianJi('<%=k%>')">
+			<%=k%>
+		</li>
+		<%}%>
+	</script>
+	<script type="text/html" id="tempCity">
+		<%for (var i = 0; i <city.length; i++) {%>
+		<li>
+			<%=city[i].name%>
+		</li>
+		<%}%>
+	</script>
+	<script>
+		$(function() {
+			$("cate-sub").hover(function() {
+				console.log("hover in")
+			}, function() {
+				console.log("out")
 			})
-		</script>
-  <script>
-  
-    var swiper = new Swiper('.swiper-container', {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
- 
-	<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+
+		})
+	</script>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			spaceBetween: 30,
+			centeredSlides: true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+	</script>
+
+	<script type="text/javascript">
+		var cityList;
+		var hotCity;
+		$.getJSON("http://localhost:8080/city.json", function(res) {
+			console.log(res);
+			var cityObj = res.result;
+			hotCity = cityObj.hotcity;
+			cityList = cityObj.citylist;
+			$("#hot").html(baidu.template("temphot", {
+				hotCity: hotCity
+			}))
+			$("#list").html(baidu.template("tempList", {
+				obj: cityList
+			}))
+		})
+
+		function dianJi(key) {
+			var city = cityList[key];
+			$("#city").html(baidu.template("tempCity", {
+				city: city
+			}))
+		}
+	</script>
+   <script type="text/javascript">
+   	 	$("#qiehuan").click(function(){
+   	 		$("#chengshi").show();
+   	 	});
+   	    $("#guanbi").click(function(){
+   	    	$("#chengshi").hide();
+   	    })
+   	 
+   	 
+   </script>
 </html>
- 
