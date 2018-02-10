@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 	<head>
@@ -22,7 +22,7 @@
 						<a href="#">北京&nbsp;&nbsp;&nbsp;</a>
 					</li>
 					<li>
-						<a id="qiehuan"  href="#">[切换城市]&nbsp;&nbsp;&nbsp;</a>
+						<a id="qiehuan" href="#">[切换城市]&nbsp;&nbsp;&nbsp;</a>
 					</li>
 					<li>|&nbsp;&nbsp;&nbsp;</li>
 					<li>
@@ -33,17 +33,16 @@
 			<div id="chengshi">
 				<ul style="display: flex;margin-left: 20px;">
 					<li>城市列表</li>
-					<li style="margin-left: 430px;"><button id="guanbi"style="background:none;">关闭</button></li>
+					<li style="margin-left: 430px;"><button id="guanbi" style="background:none;">关闭</button></li>
 				</ul>
- 				<br />
-				 
+				<br />
+
 				<ul id="hot">
-					 
+
 				</ul>
 				<br />
 				<br />
-				
-				 
+
 				<ul id="list">
 
 				</ul>
@@ -51,22 +50,22 @@
 				<br />
 				<hr />
 				<ul id="city">
-                   <li>安阳</li>
-                   <li>安庆</li>
-                   <li>安康</li>
-                   <li>阿克</li>
-                   <li>苏阿</li>
-                   <li>勒泰</li>
-                   <li>鞍山</li>
-                   <li>安西</li>
-                   <li>安顺</li>
-                   <li>阿里</li>
-                   <li>地区</li>
-                   <li>阿拉</li>
-                   <li>善盟</li>
-                   <li>阿坝</li>
+					<li>安阳</li>
+					<li>安庆</li>
+					<li>安康</li>
+					<li>阿克</li>
+					<li>苏阿</li>
+					<li>勒泰</li>
+					<li>鞍山</li>
+					<li>安西</li>
+					<li>安顺</li>
+					<li>阿里</li>
+					<li>地区</li>
+					<li>阿拉</li>
+					<li>善盟</li>
+					<li>阿坝</li>
 				</ul>
-				 
+
 			</div>
 			<div id="log_right">
 				<ul>
@@ -134,17 +133,53 @@
 		<img class="dong" src="src/imge/hot.jpg" />
 
 		<!-- Swiper -->
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide"><img src="src/imge/t010277e84ce18b98b6.png" /></div>
-				<div class="swiper-slide"><img src="src/imge/t019f09cd1c5850e1a7.png" /></div>
-				<div class="swiper-slide"><img src="src/imge/t01080757ebeb09256f.png" /></div>
+		<div class="container">
+			<div class="index-banner">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="src/imge/t010277e84ce18b98b6.png" alt=""></div>
+						<div class="swiper-slide"><img src="src/imge/t01080757ebeb09256f.png" alt=""></div>
+					</div>
+				</div>
 			</div>
 			<!-- Add Pagination -->
-			<div class="swiper-pagination"></div>
-			<!-- Add Arrows -->
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
+		</div>
+
+		<!--=====================================================================-->
+		<div class="index-menu">
+			<div class="index-menu-item">
+				修手机Pad&nbsp;&nbsp;&nbsp;>
+			</div>
+			<div class="index-menu-item">
+				修电脑Pad&nbsp;&nbsp;&nbsp;>
+			</div>
+			<div class="index-menu-item">
+				卖手机/电脑&nbsp;&nbsp;&nbsp;>
+
+			</div>
+			<div class="index-menu-item">
+				卖二手手机&nbsp;&nbsp;&nbsp;>
+
+			</div>
+		</div>
+
+		<div class="cate-list-sub">
+			<div class="cate-list-sub-inner">
+				<div class="cate-list-sub-item" id="fix-phone">
+
+					屏幕 > <br> 显示正常 屏幕不显示或花屏 屏幕触摸失灵 <br> Pad更换屏幕 电池/充电/开机 > <br> 电池问题 不开机 充电(连接)问题 按键 ><br> 开关机键失灵 Home键失灵 音量键失灵 按键故障 声音/震动 >
+					<br> 听筒问题 麦克风问题 外放扬声器问题 耳机插口故障 震动功能失效 音频故障 拍照/录像 >
+					<br>后摄像头无法拍照 前摄像头拍照故障 相机故障 外壳/边框 >
+					<br>后壳 中框变形 手机换彩壳 进水入液/主板故障 >
+					<br>进水入液 手机主板故障 其他故障 >
+					<br>软件升级/刷机 WiFi功能故障 手机信号问题 软件问题 个性化服务 >
+					<br> 点亮iPhone logo 蓝光护眼钢化膜 极透高清钢化膜 爱机深度清洁 手机换彩壳
+
+				</div>
+				<div class="cate-list-sub-item" id="fix-computer">22222</div>
+				<div class="cate-list-sub-item" id="cell-phone">33333</div>
+				<div class="cate-list-sub-item" id="buy-phone">44444</div>
+			</div>
 		</div>
 
 	</body>
@@ -221,14 +256,40 @@
 			}))
 		}
 	</script>
-   <script type="text/javascript">
-   	 	$("#qiehuan").click(function(){
-   	 		$("#chengshi").show();
-   	 	});
-   	    $("#guanbi").click(function(){
-   	    	$("#chengshi").hide();
-   	    })
-   	 
-   	 
-   </script>
+	<script type="text/javascript">
+		$("#qiehuan").click(function() {
+			$("#chengshi").show();
+		});
+		$("#guanbi").click(function() {
+			$("#chengshi").hide();
+		})
+	</script>
+	<script type="text/javascript">
+		var mySwiper = new Swiper('.swiper-container', {
+			autoplay: true, //可选选项，自动滑动
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			}
+		})
+
+		$(".index-menu-item").hover(
+			function() {
+				$(this).addClass('bg_green')
+				var i = $(this).index()
+				$(".cate-list-sub-item").eq(i).show()
+			},
+			function() {
+				$(this).removeClass('bg_green')
+				var i = $(this).index()
+				$(".cate-list-sub-item").eq(i).hide()
+			})
+
+		$(".cate-list-sub-item").hover(function() {
+			$(this).show()
+		}, function() {
+			$(this).hide()
+		})
+	</script>
+
 </html>
