@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 	<head>
@@ -187,9 +187,9 @@
 				</div>
 				<div class="cate-list-sub-item" id="fix-computer">
 
-					<ul  id="fix-computerfor">
-                       <li>屏幕电池/充电</li>
-                       <li>/开机按键</li>
+					<ul id="fix-computerfor">
+						<li>屏幕电池/充电</li>
+						<li>/开机按键</li>
 					</ul>
 
 				</div>
@@ -197,11 +197,13 @@
 		</div>
 
 	</body>
-    <script type="text/html" id="tempthree">
+	<script type="text/html" id="tempthree">
 		<%for (var i = 0; i < xiu3Obj.length; i++) {%>
-		   <li> <%=xiu3Obj[i].name%></li>
+		<li>
+			<%=xiu3Obj[i].name%>
+		</li>
 		<%} %>
-	</script> 
+	</script>
 	<script type="text/html" id="tempone">
 		<%for (var i = 0; i < hotObj.length; i++) {%>
 		<li>
@@ -365,10 +367,13 @@
 
 	<script type="text/javascript">
 		$.getJSON("http://localhost:8080/xiu3.json", function(res) {
-			console.log(res); 
+			console.log(res);
 			var xiu3Obj = res.result;
 			console.log(xiu3Obj);
-			$("#xiu3").html(baidu.template("tempthree",{xiu3Obj:xiu3Obj}))
+			$("#xiu3").html(baidu.template("tempthree", {
+				xiu3Obj: xiu3Obj
+			}))
 		});
 	</script>
+
 </html>
