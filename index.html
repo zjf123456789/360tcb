@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 
 	<head>
@@ -50,6 +50,7 @@
 				<br />
 				<hr />
 				<ul id="city">
+					<!--默认展示-->
 					<li>安阳</li>
 					<li>安庆</li>
 					<li>安康</li>
@@ -194,6 +195,123 @@
 
 				</div>
 			</div>
+		</div>
+		<!--shoujihuanping-->
+		<div id="shoujihuanpin">
+			<dl>
+
+				<dt>
+    			<img src="src/imge/t01aad5c130b8653368.jpg"/>
+    		</dt>
+			</dl>
+			<dl>
+
+				<dt>
+    			<img src="src/imge/t01dc8f9631026e7e17.jpg"/>
+    		</dt>
+			</dl>
+			<dl>
+
+				<dt>
+    			<img src="src/imge/t013b648422d14559d0.png"/>
+    		</dt>
+			</dl>
+			<dl>
+
+				<dt>
+    			<img src="src/imge/t01fc1fd0e5522663ba.jpg"/>
+    		</dt>
+			</dl>
+		</div>
+		<!--remenshoujihuishou-->
+		<br />
+		<div id="remenshouji">
+			<h1>热门手机回收</h1>
+			<p>查看更多&nbsp;&nbsp;<span>></span></p>
+		</div>
+		<!--remenshoujihuishou2-->
+		<div id="remenshouji2">
+			<h1><img src="src/imge/22.jpg"/></h1>
+			<dl>
+				<dt><img src="src/imge/31.jpg"/></li></dt>
+			</dl>
+			<dl>
+				<dt><img src="src/imge/32.jpg"/></li></dt>
+			</dl>
+			<dl>
+				<dt><img src="src/imge/33.jpg"/></li></dt>
+			</dl>
+			<dl>
+				<dt><img src=" src/imge/34.jpg"/></li></dt>
+			</dl>
+
+			<dl>
+				<dt><img src="src/imge/35.jpg"/></li></dt>
+			</dl>
+
+		</div>
+		<!--remenshoujihuishou2-->
+		<div id="remenshouji2">
+			<h1><img src="src/imge/46.jpg"/></h1>
+			<dl>
+				<dt style="width: 135px;"><img src="src/imge/40.jpg"/></li></dt>
+			</dl>
+			<dl>
+				<dt style="width: 135px;"><img src="src/imge/41.jpg"/></li></dt>
+			</dl>
+			<dl>
+				<dt style="width: 135px;"><img src="src/imge/42.jpg"/></li></dt>
+			</dl>
+			<dl>
+				<dt style="width: 135px;"><img src=" src/imge/43.jpg"/></li></dt>
+			</dl>
+
+			<dl>
+				<dt style="width: 135px;"><img src="src/imge/45.jpg"/></li></dt>
+			</dl>
+
+		</div>
+		<!--daodianweixiu-->
+		<div id="daodian">
+			<br />
+			<h1>到店维修</h1>
+			<br />
+			<table border="1" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>北京&nbsp;&nbsp;<span><a href="">▼</a></span></td>
+					<td>选择区县&nbsp;&nbsp;<span><a href="">▼</a></span></td>
+					<td>
+						<input type="text" name="" id="" value="输入您的位置查找商家" />
+					</td>
+					<td style="border: none;">
+						<button>搜索</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!--ditumoshi
+		-->
+		<br />
+		<div id="map">
+			<table border="1" cellspacing="0" cellpadding="1">
+				<tr>
+					<td style="background: white;color: green;">默认排序</td>
+					<td>
+						<input type="text" name="" id="" value="" />按成交量
+						<input type="text" name="" id="" value="" />按成交量
+						<input type="checkbox" name="" id="" value="" />先行赔付
+					</td>
+					<td><button id="btn">地图模式</button></td>
+				</tr>
+			</table>
+		</div>
+		<br />
+		<!--zhezhaocen=============================-->
+		<div id="zhezhao">
+
+			<div id="container" tabindex="0"></div>
+			<div id='panel'></div>
+			<button id="stop">关闭</button>
 		</div>
 
 	</body>
@@ -374,6 +492,43 @@
 				xiu3Obj: xiu3Obj
 			}))
 		});
+	</script>
+	<script>
+		$("#btn").click(function() {
+			$("#zhezhao").show()
+		})
+	</script>
+	<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.2&key=您申请的key值"></script>
+	<script type="text/javascript">
+		var map = new AMap.Map('container', {
+			resizeEnable: true,
+			zoom: 10,
+			center: [116.480983, 40.0958]
+		});
+		var marker = new AMap.Marker({
+			position: [116.480983, 39.989628]
+		});
+		marker.setMap(map);
+		marker.on('click', function(e) {
+			infowindow.open(map, e.target.getPosition());
+		})
+		AMap.plugin('AMap.AdvancedInfoWindow', function() {
+			infowindow = new AMap.AdvancedInfoWindow({
+				content: '<div class="info-title">高德地图</div><div class="info-content">' +
+					'<img src="https://webapi.amap.com/images/amap.jpg">' +
+					'高德是中国领先的数字地图内容、导航和位置服务解决方案提供商。<br/>' +
+					'<a target="_blank" href = "https://mobile.amap.com/">进入店铺</a></div>',
+				offset: new AMap.Pixel(0, -30)
+			});
+			infowindow.open(map, [116.480983, 39.989628]);
+		})
+	</script>
+	<script type="text/javascript" src="https://webapi.amap.com/demos/js/liteToolbar.js"></script>
+	<script>
+		$("#stop").click(function() {
+			$("#zhezhao").hide();
+			$("#container").hide()
+		})
 	</script>
 
 </html>
